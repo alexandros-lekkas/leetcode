@@ -22,7 +22,7 @@ class Solution {
         for (int i = 0; i < s.length(); i++) {
             sum = sum + (map.get(s.charAt(i)));
         }
-        
+
         return sum;
 
     }
