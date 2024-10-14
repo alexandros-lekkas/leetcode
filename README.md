@@ -1,4 +1,5 @@
 # LeetCode 🧑‍💻
 
-## 🔌 Powered By
-[LeetHub]([https://github.com/arunbhardwaj/LeetHub-2.0](https://chromewebstore.google.com/detail/leetsync-leetcode-to-gith/ppkbejeolfcbaomanmbpjdbkfcjfhjnd))
+## 🤔 Why?
+
+To put it simply, it's a way to keep track of my solutions and show off the skills I learn by doing LeetCode as well as keeping my GitHub active!
