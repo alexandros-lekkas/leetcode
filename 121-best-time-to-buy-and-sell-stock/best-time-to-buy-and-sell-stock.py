@@ -3,10 +3,12 @@ class Solution:
         buy_price = prices[0]
         profit = 0
 
-        for p in prices[1:]:
-            if buy_price > p:
-                buy_price = p
+        for price in prices[1:]:
+            if buy_price > price:
+                buy_price = price
             
-            profit = max(profit, p - buy_price)
-        
+            calculated_profit = price - buy_price
+            if calculated_profit > profit:
+                profit = calculated_profit
+
         return profit
