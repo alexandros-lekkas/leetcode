@@ -15,17 +15,15 @@ class Solution(object):
 
             if not node:
                 return False
+            curPathVal = prevVals + node.val
+            if not node.left and not node.right:
+                if curPathVal == targetSum:
+                    return True
             else:
-                curPathVal = prevVals + node.val
-
-                if not node.left and not node.right:
-                    if curPathVal == targetSum:
-                        return True
-                else:
-                    if helper(node.left, curPathVal, targetSum):
-                        return True
-                    elif helper(node.right, curPathVal, targetSum):
-                        return True
+                if helper(node.left, curPathVal, targetSum):
+                    return True
+                elif helper(node.right, curPathVal, targetSum):
+                    return True
 
             return False 
 
