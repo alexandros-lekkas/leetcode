@@ -15,7 +15,9 @@ class Solution(object):
 
             if not node:
                 return False
+
             curPathVal = prevVals + node.val
+            
             if not node.left and not node.right:
                 if curPathVal == targetSum:
                     return True
