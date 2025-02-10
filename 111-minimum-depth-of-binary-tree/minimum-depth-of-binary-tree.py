@@ -13,17 +13,20 @@ class Solution(object):
         if not root:
             return 0
 
-        def minD(node, depth):
-            result = []
+        q = [[root]]
+        dist = 0
 
-            if not node.left and not node.right:
-                return depth + 1
-            else:
-                if node.left:
-                    result.append(minD(node.left, depth + 1))
-                if node.right:
-                    result.append(minD(node.right, depth + 1))
+        while q:
+            cur = q.pop(0)
+            dist += 1
+            nxt = []
 
-            return min(result)
-        
-        return minD(root, 0)
+            for node in cur:
+                if node:
+                    if not node.left and not node.right:
+                        return dist
+                    else:
+                        nxt.append(node.left)
+                        nxt.append(node.right)
+            
+            q.append(nxt)
